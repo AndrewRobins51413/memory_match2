@@ -10,24 +10,32 @@
 #content .right{
   width: 75%;
 }
-
+.title{
+  text-align: center;
+  font-size: 42px;
+  font-style: oblique;
+}
 .header{
   width: 100%;
   color: black;
-  font-size: 40px;
-  background-color: rgb(167, 165, 165);
-  height:15vh;
+  font-size: 30px;
+  background-color: rgb(193, 243, 159);
+  height:5vh;
   border: 3px solid rgb(245, 141, 141);
-  text-align: center;
+  text-align: left;
   display: flex;
 }
 .body{
   height:100vh;
   width:100vh;
+  display: flex;
+  background-color: lightcoral;
+
 }
+
 .parent{
   width: 100%;
-  background-color: red;
+  background-color: rgb(240, 166, 166);
   height: 5px;
   font-style: oblique;
   font-size: 25px;
@@ -36,199 +44,218 @@
 .stattab{
   height: 10vh;
   width: 15vh;
-  background-color: rgb(142, 77, 185);
+  background-color: rgb(222, 190, 241);
   border: 2px solid rgb(243, 191, 94);
-  font-style:oblique;
+  font-style: oblique;
   text-align: center;
+  font-size: 14px;
 }
+
+.stattab1{
+  height: 10vh;
+  width: 15vh;
+  background-color: rgb(222, 190, 241);
+  border: 2px solid rgb(243, 191, 94);
+  font-style: oblique;
+  text-align: center;
+  font-size: 14px;
+}
+
+.stattab2{
+  height: 10vh;
+  width: 15vh;
+  background-color: rgb(222, 190, 241);
+  border: 2px solid rgb(243, 191, 94);
+  font-style: oblique;
+  text-align: center;
+  font-size: 14px;
+}
+
 .container{
   margin: auto;
-  width: 110vh;
-  display: internal;
-  height: 80vh;
+  width: 775px;
+  display: flex;
+  height: 550px;
   border: 3px solid pink;
-  justify-content: space-between;
+   background-color: lightblue;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .card{
   margin: 1%;
-  height: 25%;
-  width: 10%;
+  width: 100px;
+  height: 150px;
   background-color: gray;
   border: 3px solid black;
   position: relative;
   display: inline-block;
 
 }
-.child{
-  margin: 2vh;
-  height: 8vh;
-  width: 8vh;
-  background-color: rgb(15, 153, 146);
-  border: 2px solid rgb(243, 191, 94);
-  font-style:oblique;
-  text-align: center;
-  position: relative;
-}
 
-.title{
-  text-align: center;
-  font-size: 42px;
-  font-style: oblique;
-}
 .flipCardFront, .flipCardBack {
   background-position: center;
-  width: 100%;
-  height: 100%;
   background-size: cover;
 }
+
+/* Style the front side "This is "Face Up" */
+.flipCardFront {
+  width: 100px;
+  height: 150px;
+  background-color: rgb(202, 116, 116);
+  color: black;
+}
+/* Style the back side "This is Face-Down" */
+.flipCardBack {
+  width: 100px;
+  height: 150px;
+  background-color: rgb(247, 222, 3);
+  color: white;
+}
+
 .pic1 {
   background-image: url("../images/pic1.jpg");
-  width: 200px;
-  height: 350px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 }
 
 .pic2 {
   background-image: url("../images/pic2.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 }
 .pic3{
   background-image: url("../images/pic3.jpg");
-  width: 400px;
-  height: 300px;
+ width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic3{
   background-image: url("../images/pic3.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic4{
   background-image: url("../images/pic4.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic5{
   background-image: url("../images/pic5.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic6{
   background-image: url("../images/pic6.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic7{
   background-image: url("../images/pic7.jpg");
-  width: 400px;
-  height: 300px;
+ width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic8{
   background-image: url("../images/pic8.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic9{
   background-image: url("../images/pic9.jpg");
-  width: 400px;
-  height: 300px;
+ width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic10{
   background-image: url("../images/pic10.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic11{
   background-image: url("../images/pic11.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic12{
   background-image: url("../images/pic12.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic13{
   background-image: url("../images/pic13.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic14{
   background-image: url("../images/pic14.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic15{
   background-image: url("../images/pic15.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic16{
   background-image: url("../images/pic16.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic17{
   background-image: url("../images/pic17.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
 
 }
 .pic18{
   background-image: url("../images/pic18.jpg");
-  width: 400px;
-  height: 300px;
+  width: 100px;
+  height: 150px;
   position: fixed;
-
 }
-/* Style the front side (fallback if image is missing) */
+
 .flipCardFront {
-  height: 20vh;
-  width: 10vh;
   background-color: rgb(202, 116, 116);
   color: black;
+  opacity:50%;
 }
 
-/* Style the back side */
-.flipCardBack {
-  height: 20vh;
-  width: 10vh;
-  background-color: rgb(247, 222, 3);
-  color: white;
-}
 
+.hidden{
+  display: none;
+}
 /*.flip-card {
   background-color: transparent;
   width: 14vh;
@@ -246,7 +273,16 @@
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
-
+.child{
+  margin: 2vh;
+  height: 8vh;
+  width: 8vh;
+  background-color: rgb(15, 153, 146);
+  border: 2px solid rgb(243, 191, 94);
+  font-style:oblique;
+  text-align: center;
+  position: relative;
+}
 /* Do an horizontal flip when you move the mouse over the flip box container */
 /*.flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -256,12 +292,3 @@
 
 
 /* Style the front side (fallback if image is missing) */
-.flipCardFront {
-  background-color: rgb(202, 116, 116);
-  color: black;
-  opacity:50%;
-}
-
-.hidden{
-  display: none;
-}
