@@ -39,8 +39,7 @@ function handleCardClick(event){
     }
 
   if (secondImageCompare === firstImageCompare) {
-    console.log("cards match");
-    resetStats()
+    var promptWin = confirm("It's A Match!! - Reload the Game")
     setTimeout(function () {
       firstCardClicked.removeClass('hidden');
       secondCardClicked.removeClass('hidden')
@@ -48,29 +47,32 @@ function handleCardClick(event){
     matches = matches + 1;
 
   } else if (secondImageCompare !== null ) {
-    console.log("No Match");
-    resetStats()
     setTimeout(function () {            // setTimeout (function(){
       firstCardClicked.removeClass('hidden');
       secondCardClicked.removeClass('hidden')
      }, 1500);                 // codeblock)}, milliseconds);
+    var promptLoss = confirm("No Match-Reload the Game");
     }
 
   if (secondImageCompare !== null) {
-    var winPercent =  function winPercentCalc(){(matches/click)*100};
+    var winPercent = (matches/click)*100;
   }
+$("#button2").text(matches);
+$("#button4").text(click);
+$("#button6").text(winPercent + "%");   //parseInt
+
+//$("#button4").replaceWith("Clicks = " + click);
+
+
 console.log("testing matches", matches);
 console.log("testing clicks", click);
 console.log("percent win", winPercent);
 
-  function resetStats() {       //this does not appear to be resetting the variables.
-    var firstCardClicked = null;    //this has scope written all over it.
-    var secondCardClicked = null;    //I'm trying to re-set global variables from inside
-    var firstImageCompare = null;   // a function.
-    var secondImageCompare = null;
-
-  }
-
+  resetStats();
 }
-
-// resetting the game
+function resetStats() {       //this does not appear to be resetting the variables.
+  var firstCardClicked = null;    //this has scope written all over it.
+  var secondCardClicked = null;    //I'm trying to re-set global variables from inside
+  var firstImageCompare = null;   // a function.
+  var secondImageCompare = null;
+}
