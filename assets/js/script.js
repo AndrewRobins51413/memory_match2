@@ -21,9 +21,9 @@ function initializeApp(){$(".card").on("click", handleCardClick);}
 
 function handleCardClick(event){
     if (firstCardClicked === null) {          //once first card is defined,
-        firstCardClicked = $(event.currentTarget).find('.flipCardBack'); //defining non-null value to FCC
-        console.log('First Card clicked', firstCardClicked)
-        firstCardClicked.addClass('hidden');
+      firstCardClicked = $(event.currentTarget).find('.flipCardBack'); //defining non-null value to FCC
+      console.log('First Card clicked', firstCardClicked)
+      firstCardClicked.addClass('hidden');
       firstImageCompare = $(event.currentTarget).find('.flipCardFront').css("background-image");
       console.log("first image:", firstImageCompare);
       click = click + 1;
@@ -36,6 +36,8 @@ function handleCardClick(event){
       secondImageCompare = $(event.currentTarget).find('.flipCardFront').css("background-image");
       console.log("second image:", secondImageCompare);
       click = click+1;
+
+
     }
 
   if (secondImageCompare === firstImageCompare) {
@@ -51,7 +53,7 @@ function handleCardClick(event){
       firstCardClicked.removeClass('hidden');
       secondCardClicked.removeClass('hidden')
      }, 1500);                 // codeblock)}, milliseconds);
-    var promptLoss = confirm("No Match-Reload the Game");
+    var promptLoss = confirm("No Match - Reload the Game");
     }
 
   if (secondImageCompare !== null) {
@@ -76,3 +78,5 @@ function resetStats() {       //this does not appear to be resetting the variabl
   var firstImageCompare = null;   // a function.
   var secondImageCompare = null;
 }
+
+//The game is minimally functional. Next step is to create a proper end-function

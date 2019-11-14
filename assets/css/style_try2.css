@@ -1,0 +1,99 @@
+
+.pageParent{
+  height: 600px;
+  width: 1050px;
+  border: 3px solid lightyellow;
+  display: flex;
+  position: relative;
+  left: 30px;
+  background-color: rgb(224, 247, 187);
+
+}
+.statsContainer {
+  position: relative;
+  height: 550px;
+  width: 140px;
+  border: 4px solid white;
+  background-color: lightsalmon;
+  font-size: 14px;
+  margin: 20px;
+
+
+}
+.statsBox {
+display: flex;
+height: 70px;
+width: 110px;
+background-image: url("pic16.jpg");
+border: 3px solid lightsteelblue ;
+margin: 10px;
+
+
+}
+
+.cardContainer{
+  height: 550px;
+  width: 800px;
+  border: 3px solid lightcyan;
+  background-color: wheat;
+  margin: 20px;
+}
+
+.card{
+  height: 150px;
+  width: 100px;
+  background-color: lightskyblue;
+  display: inline-block;
+  border: 4px solid lightpink;
+  margin: 10px;
+  position: relative;
+
+}
+.cardChild1 {
+background-image: url("../images/pic5.jpg");
+  background-size:
+  width: 100px;
+  height: 150px;
+  position: fixed;
+
+}
+
+
+.cardChildTop{
+  background-size: cover;
+   width: 100px;
+  height: 150px;
+  position: absolute;
+  /* background-image: "../images/pic8.jpg" */
+}
+
+.cardChildBottom{
+  background-size: cover;
+   width: 100px;
+  height: 150px;
+  position: absolute;
+  background-image: url("../images/pic15.jpg");
+}
+
+.pic5{
+  background-image: url("../images/pic5.jpg");
+}
+
+.pic6{
+  background-image: url("../images/pic6.jpg");
+}
+
+.pic15{
+  background-image: url("../images/pic15.jpg");
+}
+
+.pic14{
+  background-image: url("../images/pic14.jpg");
+}
+.piclfz{
+   background-image: url("../images/lfz-card.jpg");
+}
+
+.hidden{
+  display: none;
+}
