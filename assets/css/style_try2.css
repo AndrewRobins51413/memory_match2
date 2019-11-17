@@ -1,0 +1,157 @@
+
+.pageParent{
+  height: 600px;
+  width: 1050px;
+  border: 3px solid lightyellow;
+  display: flex;
+  position: relative;
+  left: 30px;
+  background-color: rgb(224, 247, 187);
+
+}
+.statsContainer {
+  position: relative;
+  height: 550px;
+  width: 140px;
+  border: 4px solid white;
+  background-color: lightsalmon;
+  font-size: 14px;
+  margin: 20px;
+
+
+}
+.statsBox {
+display: flex;
+height: 70px;
+width: 110px;
+border: 3px solid lightsteelblue ;
+margin: 10px;
+margin-left: 5px;
+text-align: center;
+color: darkgreen;
+font-size: 2rem;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 30%;
+  top: 20%;
+  width: 300px;
+  height: 100px;
+  background-color: cornflowerblue;
+  text-align: center;
+  margin: 15% auto;
+  padding: 20px;
+  border: 5px solid rgb(2, 2, 2);
+  border-radius: 4px;
+}
+
+.winnermodal {
+  position: fixed;
+  z-index: 2;
+  left: 30%;
+  top: 10%;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(235, 27, 200);
+  text-decoration-line: orange;
+  text-align: center;
+  margin: 15% auto;
+  padding: 20px;
+  border: 15px solid rgb(2, 2, 2);
+  border-radius: 50%;
+}
+
+
+/* .modal-content {
+  background-color: #f5c095;
+
+  width: 450px;
+  height: 250px
+} */
+
+/* .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+} */
+
+.cardContainer{
+  height: 550px;
+  width: 800px;
+  border: 3px solid lightcyan;
+  background-color: wheat;
+  margin: 20px;
+}
+
+.card{
+  height: 150px;
+  width: 100px;
+  background-color: lightskyblue;
+  display: inline-block;
+  border: 4px solid lightpink;
+  margin: 10px;
+  position: relative;
+
+}
+
+.cardChildTop {
+  background-size: cover;
+   width: 100px;
+  height: 150px;
+  position: absolute;
+
+}
+
+.cardChildBottom, .piclfz, .pic1, .pic2, .pic3, .pic4, .pic5, .pic6{
+  background-size: cover;
+   width: 100px;
+  height: 150px;
+  position: absolute;
+}
+
+.pic1{
+  background-image: url("../images/pic1.jpg");
+}
+.pic2{
+  background-image: url("../images/pic2.jpg");
+}
+.pic3{
+  background-image: url("../images/pic3.jpg");
+}
+.pic4{
+  background-image: url("../images/pic4.jpg");
+}
+.pic5{
+  background-image: url("../images/pic5.jpg");
+}
+.pic6{
+  background-image: url("../images/pic6.jpg");
+}
+.pic7{
+  background-image: url("../images/pic7.jpg");
+}
+.pic8{
+  background-image: url("../images/pic8.jpg");
+}
+.pic9{
+  background-image: url("../images/pic9.jpg");
+}
+.pic14{
+  background-image: url("../images/pic14.jpg");
+}
+.pic15{
+  background-image: url("../images/pic15.jpg");
+}
+.piclfz{
+   background-image: url("../images/lfz-card.jpg");
+}
+
+
+
+
+.hidden{
+  display: none;
+}
