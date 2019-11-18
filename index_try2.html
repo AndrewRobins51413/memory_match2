@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/js/script_try2.js"></script>
   <link rel="stylesheet" href="assets/css/style_try2.css">
-  <title>Memory Match_Practice</title>
+  <title>Memory Match2.0_Robins</title>
 
   <style>
 
@@ -17,16 +17,16 @@
 
 <body>
 
-  <header>Memory Match - A Battle for the Ages</header>
+  <header class="hansel">Memory Match - So hot right now.</header>
   <div class="pageParent">
     <aside>
-      <div class="statsContainer">Stats Container
-        <div class="statsBox">Number of Clicks</div>
-        <div class="statsBox" id="clicks"></div>
+      <div class="statsContainer">
+        <div class="statsBox">Game Number</div>
+        <div class="statsBox" id="games"></div>
         <div class="statsBox">Matches</div>
-        <div class="statsBox"></div>
+        <div class="statsBox" id="matchCount"></div>
         <div class="statsBox">Accuracy</div>
-        <div class="statsBox"></div>
+        <div class="statsBox" id="averageClick"><label>%</label></div>
       </div>
     </aside>
 
@@ -39,7 +39,7 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card2" id="cardZ2">
-          <div class="cardChildBottom pic15"></div>
+          <div class="cardChildBottom pic7"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ3">
@@ -47,7 +47,7 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ4">
-          <div class="cardChildBottom pic6"></div>
+          <div class="cardChildBottom pic15"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ5">
@@ -55,7 +55,7 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ6">
-          <div class="cardChildBottom pic2"></div>
+          <div class="cardChildBottom pic1"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ7">
@@ -63,7 +63,7 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ8">
-          <div class="cardChildBottom pic7"></div>
+          <div class="cardChildBottom pic5"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ9">
@@ -71,11 +71,11 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ10">
-          <div class="cardChildBottom pic8"></div>
+          <div class="cardChildBottom pic5"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ11">
-          <div class="cardChildBottom pic7"></div>
+          <div class="cardChildBottom pic1"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ12">
@@ -83,7 +83,7 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ13">
-          <div class="cardChildBottom pic8"></div>
+          <div class="cardChildBottom pic9"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card4" id="cardZ14">
@@ -103,12 +103,12 @@
           <div class="cardChildTop piclfz"></div>
         </div>
         <div class="card card3" id="cardZ18">
-          <div class="cardChildBottom pic2"></div>
+          <div class="cardChildBottom pic9"></div>
           <div class="cardChildTop piclfz"></div>
         </div>
        </div>
-      <div class="modal hidden">Match!</div>
-      <div class="winnermodal hidden">Winner Winner!</div>
+      <div class="modal hidden">Matches - so hot right now</div>
+      <div class="winnermodal hidden">Magnum Winner!</div>
     </main>
    </div>
   </body>

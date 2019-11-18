@@ -6,131 +6,113 @@ var secondCardClicked = null;
 var firstImageCompare = null;
 var secondImageCompare = null;
 var matches = 0;
+var average = 0;
 var clickCount = 0;
-var max_matches = 1;
+var max_matches = 9;
 var winnerModal = null;
-var modal = null;
+var winCount = 0;
+var averageFormatted = 0;
+var gameCount = 0;
 
-function initializeApp(){
+function initializeApp() {
   $('.card').on("click", cardClickHandler);
 
 }
-function cardClickHandler(event){
-
-if(firstCardClicked === null) {  //checking to see if FCC has already happened
-  firstCardClicked = $(event.currentTarget).find('.cardChildTop'); //nonzero def for FCC
-  firstCardClicked.addClass('hidden');
-  firstImageCompare = $(event.currentTarget).find('.cardChildBottom').css('background-image');
-  clickCount = clickCount + 1;
-}
-
-else {
-  //this is for the second card clicked
-  secondCardClicked = $(event.currentTarget).find('.cardChildTop');
-  secondCardClicked.addClass('hidden');
-  secondImageCompare = $(event.currentTarget).find('.cardChildBottom').css('background-image');
-  clickCount = clickCount + 1;
-}
-  if (secondImageCompare != null) {
-    imageCompare();
+function cardClickHandler(event) {
+  
+  if (firstCardClicked === null) {  //checking to see if FCC has already happened
+    firstCardClicked = $(event.currentTarget).find('.cardChildTop'); //nonzero def for FCC
+    firstCardClicked.addClass('hidden');
+    firstImageCompare = $(event.currentTarget).find('.cardChildBottom').css('background-image');
+    clickCount = clickCount + 1;
   }
+
+  else {
+  
+    //this is for the second card clicked
+    secondCardClicked = $(event.currentTarget).find('.cardChildTop');
+    secondCardClicked.addClass('hidden');
+    secondImageCompare = $(event.currentTarget).find('.cardChildBottom').css('background-image');
+    imageCompare();
+    clickCount = clickCount + 1;
+
+  }
+  
   console.log("Clicks ", clickCount);
-  $('#clicks').text(clickCount);
+  console.log("average ", averageFormatted, "%");
+
+  $('#games').text(winCount);
+  average = matches / (clickCount / 2);
+  averageFormatted = (average.toPrecision(2))*100;
+  $('#averageClick').text(averageFormatted + "%");
 }
 
 //Comparing images - Detecting Matches
-function imageCompare(){
-  if(firstImageCompare===secondImageCompare){
-    matches++;
+function imageCompare() {
+  
+  
+  console.log("first image ", firstImageCompare);
+  console.log("second image ", secondImageCompare);
+  if (firstImageCompare === secondImageCompare) {  //match condition
+    matches++;                                  // increment match counter
     console.log("matched! ", matches);
-    matchModal();
-    winModal();
-     //firstCardClicked = null;
-     //secondCardClicked = null;
-  }
+    $('#matchCount').text(matches);              //update match stats
+    matchModal();                               // alerts player of match
+    winModal();  
+   firstCardClicked = null;
+   secondCardClicked = null;
+   firstImageCompare = null;
+   secondImageCompare = null;
+    }                                            
   else {
     console.log("No Match");
     setTimeout(imageReset, 1500);
   }
 }
+
 //Resetting non-matched cards
-function imageReset(){
-  firstCardClicked.removeClass('hidden');
-  secondCardClicked.removeClass('hidden');
+  function imageReset() {
+    if(clickCount%2 === 0){            
+  firstCardClicked.removeClass('hidden');     // tried .find to solve the premature null problem
+  secondCardClicked.removeClass('hidden');    //find('.cardChildBottom').
   firstCardClicked = null;
   secondCardClicked = null;
+  firstImageCompare = null;
+  secondImageCompare = null;
+    }
 }
 
 function matchModal() {
-  modal = $('.modal');
-    modal.removeClass('hidden');
-    setTimeout(8000);
-    modal.addClass('hidden');
-    }
+  var modal = $('.modal');
+  modal.removeClass('hidden');
+  function modalTimer(){ 
+    modal.addClass('hidden')
+  }
+  
+  setTimeout(modalTimer,1500);
+}  
+
 
 
 function winModal() {
   winnerModal = $('.winnermodal');
-  if (matches === max_matches) {
+  if (max_matches === matches) {
     winnerModal.removeClass('hidden');
-    setTimeout(imageReset, 10000);
-    winnerModal.addClass('hidden');
-    //add reset function here
+    $('<button>').on('click', reSet());
+    winCount = winCount+1;
+    function winnerTimer(){
+      winnerModal.addClass('hidden');
+    }
+    setTimeout(winnerTimer, 10000);
   }
+      
 }
 
+function reSet(){
+  $('.card').removeClass('hidden');
+  matches = 0;
+  average = 0;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Copied from Duckett p505
-// var modal = (function(){
-//   var $window = $(window);
-//   var $modal = $('<div class="modal"/>');
-//   var $content = $('<div class="modal-content"/>');
-//   var $close = $('<button role="button" class="modal-close">close</button>');
-
-//   $modal.append($content, $close);  //adds close button
-
-//   $close.on('click', function(e) {    // allows user to click on 'close'
-//     e.preventDefault();               // Prevent link behavior?
-//     modal.close();                    // close modal window
-//   });
-//   return{
-//     center: function(){               // find center of window
-//       var top = Math.max($window.height()- $modal.outerHeight(),0)/2
-//       var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2
-//       $modal.css({
-//         top: top + $window.scrollTop(),
-//         left: left + $window.scrollLeft()
-//       });
-//     },
-//       open: function(settings) {
-//         $content.empty().append(settings.content);
-
-//         $modal.css({                           // sets modal dimensions
-//           width: settings.width || 'auto',    //
-//           height: settings.height || 'auto'
-//         }).appendTo('body');                    //adds to page
-//         modal.center();
-//         $(window).on('resize', modal.center);
-//       },
-//       close: function(){
-//         $content.empty();
-//         $modal.detach();
-//         $(window).off('resize',modal.center);
-//       }
-//     };
-//   }());
-//   }
+  clickCount = 0;
+  gameCount = gameCount+1;
+}
