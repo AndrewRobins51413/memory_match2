@@ -122,36 +122,51 @@ vertical-align: middle;
 
 .pic1{
   background-image: url("../images/pic1.jpg");
+  background-position: center;
 }
 .pic2{
   background-image: url("../images/pic2.jpg");
+  background-position: center;
 }
 .pic3{
   background-image: url("../images/pic3.jpg");
+  background-position: center;
 }
 .pic4{
   background-image: url("../images/pic4.jpg");
+  background-position: center;
 }
 .pic5{
   background-image: url("../images/pic5.jpg");
+  background-position: center;
 }
 .pic6{
   background-image: url("../images/pic6.jpg");
+  background-position: center;
 }
 .pic7{
   background-image: url("../images/pic7.jpg");
+  background-position: center;
 }
 .pic8{
   background-image: url("../images/pic8.jpg");
+  background-position: center;
 }
 .pic9{
   background-image: url("../images/pic9.jpg");
+  background-position: center;
+}
+.pic11{
+  background-image: url("../images/pic11.jpg");
+  background-position: center;
 }
 .pic14{
   background-image: url("../images/pic14.jpg");
+  background-position: center;
 }
 .pic15{
   background-image: url("../images/pic15.jpg");
+  background-position: center;
 }
 .piclfz{
    background-image: url("../images/lfz-card.jpg");
